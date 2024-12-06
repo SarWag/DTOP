@@ -1,0 +1,34 @@
+{
+	"ProcessTypeAssembly": {
+		"Variable": "Place",
+		"Value": 6.0,
+		"Unit": "Nm",
+		"Priority": 1,
+		"PrID": "0001",
+		"ProcessType": "Place"
+	},
+	"ProcessTypeScrewingCluster": {
+		"Variable": "Screw",
+		"Value": 6.0,
+		"Unit": "Nm",
+		"Priority": 1,
+		"PrID": "0002",
+		"ProcessType": "Screw"
+	},
+	"ProcessTypeScrewing": {
+		"Variable": "Screw",
+		"Value": 6.0,
+		"Unit": "Nm",
+		"Priority": 1,
+		"PrID": "0002",
+		"ProcessType": "Screw"
+	},
+	"ProcessTypeFeeding": {
+		"Variable": "Pick",
+		"Value": 2.0,
+		"Unit": "Nm",
+		"Priority": 1,
+		"PrID": "0003",
+		"ProcessType": "Pick"
+	}
+}

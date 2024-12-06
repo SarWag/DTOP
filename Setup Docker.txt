@@ -1,0 +1,131 @@
+# Docker Instructions
+
+This is a step for step instruction manual to dockerize the ASSISTANT Website.
+All steps that use the docker command might have to be run with sudo or without sudo if you run into problems.
+
+!!! Make sure to change all code inside << >> these brackets. These are to be customized. !!!
+
+## Database
+
+1. Run docker container
+
+The database uses postgresql which uses an existing image. Therefore the container can just be run using the command:
+
+>> sudo docker run -itd -e POSTGRES_USER=<<username>> -e POSTGRES_PASSWORD=<<password>> -p 5432:5432 -v /data:/var/lib/postgresql/data --name <<container-name>> postgres
+
+2. Create database
+
+To store the data, you must create a database inside the container. First, access the container bash:
+
+>> sudo docker exec -it <<container-name>> bash
+
+>> psql -U <<username>>
+
+Now you have access to the database structure and can create a new Database by running:
+
+>> CREATE DATABASE <<database-name>>;
+
+You can check if the database exists by running "\l" command.
+
+Exit the container (command "exit").
+Lastly, check the IP Address of the container by running:
+
+>> sudo docker inspect <<container-name>> | grep IPAddress
+
+Remember the IP Address for later.
+Now you have set up the database, but there aren't any tables yet. The tables will be added when running the backend.
+
+
+## Backend
+
+1. Change the route to the database in app.py
+
+The backend is connected to the database. Therefore it is necessary to route to the correct database.
+Inside the app.py file change the 'SQLALCHEMY_DATABASE_URI':
+
+>> app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://<<username>>:<<password>>@<<database IPAddress>>:5432/<<database-name>>"
+
+Now the backend can find the database.
+
+2. Create new docker image for backend
+
+To build a new image go to the backend folder containing the dockerfile and run:
+
+>> sudo docker build -t <<backend-image-name>> .
+
+This will create a new image.
+
+3. Run docker image
+
+To run the docker container you just created, run:
+
+>> sudo docker run -dp 3000:3000 --name <<backend-container-name>> <<backend-image-name>>
+
+4. Create the database tables
+
+To create the database tables it is necessary to initialize and migrate the database models defined in the backend.
+Access the container by running:
+
+>> sudo docker exec -it <<backend-container-name>> bash
+
+Run the following commands to create a new migration:
+
+>> flask db init
+>> flask db migrate
+>> flask db upgrade
+
+If everything worked out, you should now be able to see a new folder "migrations" inside the container (run "dir"-command to check).
+You can also go back to the database container and inside the database you created to check if new tables exist.
+(Inside the container, run "\c <<database-name>>" followed by "\dt" to see all tables)
+Afterwards, exit from the container (command "exit") and restart it:
+
+>> sudo docker restart <<backend-container-name>>
+
+%%%%%
+OPTIONAL:
+In case you change a lot to the backend and don't want to initialize the database tables again, you can copy the "migrations" folder to your desktop and copy it into the new container after creation using:
+
+>> sudo docker cp <<backend-container-name>>:/app/migrations .
+
+To copy to the container run:
+
+>> sudo docker cp migrations <<backend-container-name>>:/app/
+}
+%%%%%
+
+
+As a last step you must check the IP Address of the backend container
+
+>> sudo docker inspect <<backend-container-name>> | grep IPAddress
+
+
+## User Interface
+
+1. Change the route to the backend in "package.json"
+
+The UI is connected to the backend via a proxy. Therefore it is necessary to route to the correct address.
+Inside the "package.json" file change the 'proxy':
+
+>>  "proxy": "http://<<backend IPAddress>>:5000"
+
+Now the UI can proxy requests to the backend.
+
+2. Create new docker image for UI
+
+To build a new image go to the user-interface folder containing the dockerfile and run:
+
+>> sudo docker build -t <<ui-image-name>> .
+
+This will create a new image.
+
+3. Run docker image
+
+To run the docker container you just created, run:
+
+>> sudo docker run -dp 3000:3000 --name <<ui-container-name>> <<ui-image-name>>
+
+After a while (shouldn't take longer than a minute), you can go to your webbrowser and type:
+
+>> localhost:3000
+
+You should see the main page of the ASSISTANT website and be able to interact with it.

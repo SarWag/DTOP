@@ -1,0 +1,33 @@
+FILES:
+    ProcessGraph: [TASK, NODE]
+    ProductionGraph: [CELL]
+    ProductGraph: []
+
+TASK:
+    DATABASE: Task
+    LIST: Node
+    ATTRIBUTES:
+        task_id: TaskID
+        task_type: Tasktype
+        process_type: ProcessTypeName
+        modules: AssemblyNode
+
+CELL:
+    DATABASE: Cell
+    LIST: oSG.Nodes
+    ATTRIBUTES:
+        cell_id: NodeNr
+        cell_name: NodeName
+        cell_type: sStationType
+
+NODE:
+    DATABASE: Node
+    LIST: Node
+    ATTRIBUTES:
+        node_id: NodeID
+        task_id: TaskID
+        cell_id: EndAssemblyNode.StationID
+        cost: Costs
+        quality: MonitoringEfficiency
+        task_type: Tasktype
+        time: ProcessTime

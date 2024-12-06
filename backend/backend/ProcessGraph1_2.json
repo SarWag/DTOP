@@ -1,0 +1,197 @@
+{
+    "Name": "Enhanced Assembly Priority Graph",
+    "Node": [
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join0",
+            "PRNodeName": "Node_1+Robot_1+Screwdriver_1+Gripper_1",
+            "NodeID": "1",
+            "TaskID": "0",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join0",
+            "PRNodeName": "Node_3+Robot_2+Screwdriver_2+Gripper_2",
+            "NodeID": "2",
+            "TaskID": "0",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join0",
+            "PRNodeName": "Node_3+Worker_1+Screwdriver_2",
+            "NodeID": "3",
+            "TaskID": "0",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join0",
+            "PRNodeName": "Node_4+Worker_2+Screwdriver_2",
+            "NodeID": "4",
+            "TaskID": "0",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join1",
+            "PRNodeName": "Node_1+Robot_1+Screwdriver_1+Gripper_1",
+            "NodeID": "5",
+            "TaskID": "1",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join1",
+            "PRNodeName": "Node_3+Robot_2+Screwdriver_2+Gripper_2",
+            "NodeID": "6",
+            "TaskID": "1",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join1",
+            "PRNodeName": "Node_3+Worker_1+Screwdriver_2",
+            "NodeID": "7",
+            "TaskID": "1",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join1",
+            "PRNodeName": "Node_4+Worker_2+Screwdriver_2",
+            "NodeID": "8",
+            "TaskID": "1",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join2",
+            "PRNodeName": "Node_1+Robot_1+Screwdriver_1+Gripper_1",
+            "NodeID": "9",
+            "TaskID": "2",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join2",
+            "PRNodeName": "Node_3+Robot_2+Screwdriver_2+Gripper_2",
+            "NodeID": "10",
+            "TaskID": "2",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join2",
+            "PRNodeName": "Node_3+Worker_1+Screwdriver_2",
+            "NodeID": "11",
+            "TaskID": "2",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join2",
+            "PRNodeName": "Node_4+Worker_2+Screwdriver_2",
+            "NodeID": "12",
+            "TaskID": "2",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Screwing Tasks - Cluster",
+            "ProcessTypeName": "Screw3",
+            "PRNodeName": "Node_1+Robot_1+Screwdriver_1+Gripper_1",
+            "NodeID": "13",
+            "TaskID": "3",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Screwing Tasks - Cluster",
+            "ProcessTypeName": "Screw3",
+            "PRNodeName": "Node_3+Robot_2+Screwdriver_2+Gripper_2",
+            "NodeID": "14",
+            "TaskID": "3",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Screwing Tasks - Cluster",
+            "ProcessTypeName": "Screw3",
+            "PRNodeName": "Node_3+Worker_1+Screwdriver_2",
+            "NodeID": "15",
+            "TaskID": "3",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Screwing Tasks - Cluster",
+            "ProcessTypeName": "Screw3",
+            "PRNodeName": "Node_4+Worker_2+Screwdriver_2",
+            "NodeID": "16",
+            "TaskID": "3",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join4",
+            "PRNodeName": "Node_1+Robot_1+Screwdriver_1+Gripper_1",
+            "NodeID": "17",
+            "TaskID": "4",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join4",
+            "PRNodeName": "Node_3+Robot_2+Screwdriver_2+Gripper_2",
+            "NodeID": "18",
+            "TaskID": "4",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join4",
+            "PRNodeName": "Node_3+Worker_1+Screwdriver_2",
+            "NodeID": "19",
+            "TaskID": "4",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Assembly Task",
+            "ProcessTypeName": "Join4",
+            "PRNodeName": "Node_4+Worker_2+Screwdriver_2",
+            "NodeID": "20",
+            "TaskID": "4",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Screwing Tasks - Cluster",
+            "ProcessTypeName": "Screw5",
+            "PRNodeName": "Node_1+Robot_1+Screwdriver_1+Gripper_1",
+            "NodeID": "21",
+            "TaskID": "5",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Screwing Tasks - Cluster",
+            "ProcessTypeName": "Screw5",
+            "PRNodeName": "Node_3+Robot_2+Screwdriver_2+Gripper_2",
+            "NodeID": "22",
+            "TaskID": "5",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Screwing Tasks - Cluster",
+            "ProcessTypeName": "Screw5",
+            "PRNodeName": "Node_3+Worker_1+Screwdriver_2",
+            "NodeID": "23",
+            "TaskID": "5",
+            "AssemblyOrder": "0"
+        },
+        {
+            "Tasktype": "Screwing Tasks - Cluster",
+            "ProcessTypeName": "Screw5",
+            "PRNodeName": "Node_4+Worker_2+Screwdriver_2",
+            "NodeID": "24",
+            "TaskID": "5",
+            "AssemblyOrder": "0"
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+assistant-project
+flask
+python-dotenv
+requests

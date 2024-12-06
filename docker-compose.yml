@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+    backend:
+        image: gitlab.lrz.de:5005/pd/pd.visualization/backend
+        restart: on-failure
+        depends_on:
+           - postgres_db
+        ports:
+            - "5000:5000"
+
+    postgres_db:
+        image: postgres:latest
+        restart: on-failure
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_DB=assistant_db
+            - POSTGRES_PASSWORD=assistant_pw
+            - POSTGRES_USER=assistant_user
+
+    user-interface:
+        image: gitlab.lrz.de:5005/pd/pd.visualization/user-interface
+        restart: on-failure
+        ports:
+            - "3000:3000"
+
+    chatbot:
+        image: gitlab.lrz.de:5005/pd/pd.visualization/chatbot
+        restart: on-failure
+        ports:
+            - "5005:5005"
+            - "5055:5055"

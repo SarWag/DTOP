@@ -1,0 +1,34 @@
+{
+	"ProcessTypeAssembly": {
+		"Variable": "Joining",
+		"Value": 6.0,
+		"Unit": "Nm",
+		"Priority": 1,
+		"PrID": "0001",
+		"ProcessType": "Joining"
+	},
+	"ProcessTypeScrewingCluster": {
+		"Variable": "Screwing",
+		"Value": 6.0,
+		"Unit": "Nm",
+		"Priority": 1,
+		"PrID": "0002",
+		"ProcessType": "Screwing"
+	},
+	"ProcessTypeScrewing": {
+		"Variable": "Screwing",
+		"Value": 6.0,
+		"Unit": "Nm",
+		"Priority": 1,
+		"PrID": "0002",
+		"ProcessType": "Screwing"
+	},
+	"ProcessTypeFeeding": {
+		"Variable": "Feeding",
+		"Value": 2.0,
+		"Unit": "Nm",
+		"Priority": 1,
+		"PrID": "0003",
+		"ProcessType": "Feeding"
+	}
+}

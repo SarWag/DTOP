@@ -1,0 +1,11 @@
+NODE:
+    DATABASE: Node
+    LIST: Node
+    id: node_id
+    IDENTIFIER:
+        id: NodeID
+    ATTRIBUTE_KEY: features
+    ATTRIBUTES:
+        time: ProcessTime
+        cost: Costs
+        quality: MonitoringEfficiency

@@ -1,0 +1,11 @@
+Setup for ASSISTANT Web-Application Deployment
+
+Idea:
+    Deploy Web-Application server to globally accessable server via gitlab CI/CD.
+
+Requirements for the server:
+    1. Running Linux distribution
+    2. Accessable via ssh with permission to write to designated folder or docker container
+    3. Installed docker & docker-compose
+    4. Gitlab Runner to run CI/CD jobs on gitlab.lrz.de (possibly in docker container, but not must)
+    5. Accessable with url or ip-address from anywhere

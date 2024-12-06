@@ -1,0 +1,6 @@
+{
+	"TaskTypeAssembly": "Place",
+	"TaskTypeScrewing": "Screw",
+	"TaskHandling": "Pick",
+	"TaskTransport": "Transport"
+}

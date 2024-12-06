@@ -1,0 +1,6 @@
+{
+	"TaskTypeAssembly": "Joining",
+	"TaskTypeScrewing": "Screwing",
+	"TaskHandling": "Feeding",
+	"TaskTransport": "Transport"
+}

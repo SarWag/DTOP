@@ -1,0 +1,15 @@
+alembic==1.9.1
+assistant_project==0.3.8
+Flask==2.2.5
+Flask_Migrate==4.0.1
+flask_sqlalchemy==3.0.5
+pandas==2.0.3
+numpy==1.24.3
+PyQt5==5.15.9
+pyqtgraph==0.13.3
+PyYAML==6.0
+scikit_fuzzy==0.4.2
+setuptools==44.0.0
+SQLAlchemy==1.4.46
+matplotlib
+psycopg2
